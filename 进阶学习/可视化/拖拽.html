@@ -3,7 +3,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Untitled Document</title>
 </head>
-
+<div style="width: 100px;height: 100px;background: coral" id="dropDom">可拖拽区域</div>
 <body>
 </body>
+<script>
+  window.onload=function () {
+    // 1、获取到当前元素dropdom
+    const dropDom = document.getElementById('dropDom')
+    // 2、保存当前dropdom的开始位置
+    // 3、给元素绑定mousedown事件
+    dropDom.onmousedown=function (e) {
+      let mouseX = e.clientX
+      let mouseY = e.clientY
+      console.log(mouseX,mouseY)
+    }
+    document.onmouseup = function (e) {
+      let mouseX = e.clientX
+      let mouseY = e.clientY
+      console.log(mouseX,mouseY)
+     }
+    // 4、给元素绑定mousemove事件
+  }
+</script>
 </html>
